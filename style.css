@@ -1,0 +1,448 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  background-image: url('assets/mobile/background_mobile.png');
+  background-size: cover;
+  background-position: top;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+.logo {
+  position: absolute;
+  top: -10px;
+}
+
+.wrapper {
+  padding: 21px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.fireworks-image {
+  position: absolute;
+  top: 178px;
+  right: 0;
+  width: 100%;
+  height: auto;
+  mix-blend-mode: lighten;
+}
+
+.logo {
+  order: 1;
+}
+
+@media (min-width: 700px) and (orientation: portrait) {
+  .logo {
+    width: 176px;
+    height: 115px;
+  }
+
+  body {
+    background-image: url('assets/tablet-portrait/background_tablet-portrait.jpg');
+  }
+
+  .terms-conditions {
+    width: 216px !important;
+    height: 40px !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    background-image: url('assets/tablet-landscape/Tablet_background.jpg');
+  }
+
+  .terms-conditions {
+    margin-right: 30px;
+  }
+
+  .logo {
+    width: 175px;
+    height: 115px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .terms-conditions {
+    margin-right: 60px;
+  }
+
+  .logo {
+    width: 204px;
+    height: 133px;
+  }
+}
+
+.main-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 76px;
+  position: relative;
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .main-area {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    margin-top: 113px;
+  }
+}
+
+@media (min-width: 700px) and (orientation: portrait) {
+  .main-area-left-banner {
+    width: 601px;
+    height: 81px;
+    margin-top: 119px;
+  }
+
+  .main-area {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .main-area-left-banner {
+    width: 601px;
+    height: auto;
+  }
+}
+
+@media (min-width: 1920px) {
+  .main-area-left-banner {
+    width: 827px;
+    height: auto;
+  }
+}
+
+.main-area-text-and-button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+}
+
+@media (min-width: 460px) {
+}
+
+@media (min-width: 700px) {
+  .main-area-text-and-button-area-description {
+    width: 352px;
+    height: 440px;
+    margin-top: 123px;
+  }
+
+  .fireworks-image {
+    width: 780px;
+    top: 325px;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .main-area-text-and-button-area-description {
+    display: none;
+  }
+}
+
+.main-area-text-and-button-button {
+  width: 199px;
+  height: 48px;
+  background: url('assets/mobile/button.png');
+  background-size: cover;
+  cursor: pointer;
+  z-index: 5555;
+}
+
+@media (min-width: 700px) and (orientation: portrait) {
+  .main-area-text-and-button-button {
+    width: 250px;
+    height: 60px;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 16px;
+    transition: none !important;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .main-area-text-and-button-button {
+    position: absolute;
+    right: 214px;
+    top: -82px;
+  }
+
+  .main-area-text-and-button-button:hover {
+    transform: scale(1.1);
+    transition: 0.5s transform;
+  }
+}
+
+@media (min-width: 1920px) {
+  .main-area-text-and-button-button {
+    width: 249px;
+    height: 60px;
+    right: 300px;
+    top: -119px;
+  }
+
+  .main-area {
+    margin-top: 136px;
+  }
+}
+
+.steps {
+  margin-top: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (min-width: 460px) and (orientation: portrait) {
+  .steps {
+    gap: 48px;
+  }
+}
+
+@media (min-width: 700px) and (orientation: portrait) {
+  .steps {
+    gap: 40px;
+    margin-top: -5px !important;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .steps {
+    gap: 48px;
+  }
+}
+
+@media (min-width: 1920px) and (orientation: landscape) {
+  .steps {
+    gap: 64px;
+  }
+}
+
+.step {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .step {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    gap: 0;
+  }
+}
+
+@media (min-width: 700px) and (orientation: portrait) {
+  .step-number {
+    width: 51px;
+    height: 64px;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .step-number {
+    width: 51px;
+    height: 64px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .step-number {
+    width: 90px;
+    height: 114px;
+  }
+}
+
+@media (min-width: 700px) and (orientation: portrait) {
+  .step-text {
+    width: 172px;
+    height: 121px;
+  }
+
+  .payments {
+    gap: 40px !important;
+    margin-top: 32px !important;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .step-text {
+    width: 196px;
+    height: 64px;
+  }
+  .payments {
+    gap: 40px !important;
+    margin-top: 16px !important;
+  }
+  .footer-text {
+    font-size: 11px !important;
+    line-height: 16px !important;
+  }
+}
+
+@media (min-width: 1920px) {
+  .step-text {
+    width: 256px;
+    height: auto;
+  }
+}
+
+.payments {
+  margin-top: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.payment {
+  height: 16px;
+  margin-left: 12px;
+}
+
+.footer {
+  margin-top: 32px;
+}
+
+.footer-text {
+  text-align: center;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 9px;
+  line-height: 13px;
+  color: white;
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .footer-text {
+    max-width: 960px;
+  }
+
+  .fireworks-image {
+    width: 1024px;
+    right: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 187px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .footer-text {
+    max-width: 1760px;
+  }
+
+  .fireworks-image {
+    top: 359px !important;
+    width: 1380px;
+  }
+}
+
+.terms-conditions {
+  margin-top: 16px;
+  background: url('assets/mobile/terms-button.png');
+  background-size: cover;
+  width: 162px;
+  height: 30px;
+  cursor: pointer;
+}
+
+@media (min-width: 1920px) {
+  .terms-conditions {
+    width: 266px;
+    height: 49px;
+  }
+}
+
+.terms-conditions:hover {
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */
